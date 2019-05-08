@@ -3,7 +3,7 @@ from user_agents import parse
 from requests import post
 app = Flask(__name__)
 EMAIL_DOMAIN = "sandbox586232a922274a4da89148d3cf22c8d5.mailgun.org"
-EMAIL_API_KEY = "4b0f3cc6ff698555603abd635e830e6b-e566273b-68770580"
+EMAIL_API_KEY = "a72b9f4278a87fb96656a29ba53fba9f-e566273b-192f5999"
 GATE_LINK = "https://api.mailgun.net/v3/{}/messages".format(EMAIL_DOMAIN)
 From = "admin@"+EMAIL_DOMAIN
 subject_res = "new order from "

